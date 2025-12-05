@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
-  output: "export",         // <-- required for GitHub Pages
-  basePath: isProd ? '/nora-julianna' : '',
-  assetPrefix: isProd ? '/nora-julianna' : '',
+  output: "export",              // required for GitHub Pages
+  basePath: "/nora-julianna",    // always use repo name
+  assetPrefix: "/nora-julianna/",
+
+  images: {
+    unoptimized: true,           // fixes static export issues with images
+  },
 };
 
 export default nextConfig;
-
