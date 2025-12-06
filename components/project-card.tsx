@@ -9,8 +9,8 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link href={`/projects/${project.slug}`}>
-      <div className="group cursor-pointer">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      <div className="group cursor-pointer mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-start">
           {/* Left column - star and title */}
           <div className="flex flex-row">
             <div className="mb-8 h-12 w-12">
