@@ -10,7 +10,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "1",
+    id: "01",
     slug: "alter-ego",
     title: "ÆLTER ÆGO",
     keywords: ["portrait", "photography", "artistic"],
@@ -23,7 +23,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "2",
+    id: "02",
     slug: "starshaped",
     title: "Starshaped",
     keywords: ["geometric", "abstract", "experimental"],
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "3",
+    id: "03",
     slug: "street-photography",
     title: "Street Photography",
     keywords: ["urban", "documentary", "candid"],

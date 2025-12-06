@@ -12,13 +12,15 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="group cursor-pointer">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {/* Left column - star and title */}
-          <div className="flex flex-col">
+          <div className="flex flex-row">
             <div className="mb-8 h-12 w-12">
-              <svg className="w-full h-full text-gray-400" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
+              <p className="text-gray-400 text-3xl group-hover:text-gray-600">
+                {project.id}
+              </p>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-wider leading-tight">{project.title}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-wider leading-tight">
+              {project.title}
+            </h2>
           </div>
 
           {/* Right column - image and keywords */}
