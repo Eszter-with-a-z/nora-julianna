@@ -30,18 +30,22 @@ export default function Navigation() {
 
       {/* Sidebar */}
       <aside
-        className={`fixed left-0 top-0 h-screen w-56 bg-white border-r border-gray-200 p-8 transform transition-transform duration-300 ease-in-out z-40 md:relative md:transform-none md:z-auto ${
+        className={`fixed left-0 top-0 pt-16 h-screen w-56 bg-white border-r border-gray-200 p-8 transform transition-transform duration-300 ease-in-out z-40 md:relative md:transform-none md:z-auto ${
           isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         }`}
       >
-        <nav className="space-y-8 mt-16 md:mt-0">
+        <nav className="  text-md  pt-16 md:pt-16">
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-widest mb-2">Portfolio</h2>
-            <p className="text-sm text-gray-600">Nora Julianna</p>
+            <h2 className="text-lg pr-16 font-bold uppercase tracking-widest">
+              Portfolio
+            </h2>
+            <p className="text-lg text-gray-600">
+              Nora Julianna
+            </p>
           </div>
 
           {/* Navigation Items */}
-          <ol className="space-y-4 text-sm">
+          <ol className="space-y-4 text-md">
             {navItems.map((item, index) => (
               <li key={item.href}>
                 <Link
@@ -49,7 +53,9 @@ export default function Navigation() {
                   className="block hover:font-bold transition-all group"
                   onClick={() => setIsOpen(false)}
                 >
-                  <span className="text-gray-400 group-hover:text-gray-600">{String(index).padStart(2, "0")}.</span>{" "}
+                  <span className="text-gray-400 group-hover:text-gray-600">
+                    {String(index).padStart(2, "0")}.
+                  </span>{" "}
                   {item.label}
                 </Link>
               </li>
@@ -60,7 +66,7 @@ export default function Navigation() {
 
       {/* Mobile Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden" onClick={() => setIsOpen(false)} />
+        <div className="fixed inset-0 bg-black opacity-50 z-30 md:hidden" onClick={() => setIsOpen(false)} />
       )}
     </>
   )
