@@ -30,19 +30,26 @@ export default function Navigation() {
 
       {/* Sidebar */}
       <aside
-        className={`fixed left-0 top-0 pt-16 h-screen w-56 bg-white border-r border-gray-200 p-8 transform transition-transform duration-300 ease-in-out z-40 md:relative md:transform-none md:z-auto ${
+        className={`fixed left-0 top-0 pt-16 h-screen w-56 bg-white border-r border-gray-200 p-2 transform transition-transform duration-300 ease-in-out z-40 md:relative md:transform-none md:z-auto ${
           isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         }`}
       >
         <nav className="  text-md  pt-16 md:pt-16">
-          <div>
-            <h2 className="text-lg pr-16 font-bold uppercase tracking-widest">
-              Portfolio
-            </h2>
-            <p className="text-lg text-gray-600">
-              Nora Julianna
-            </p>
-          </div>
+          <Link
+            href="/"
+            className="block hover:font-bold transition-all group"
+            onClick={() => setIsOpen(false)}
+          >
+            <div>
+              <h2 className="text-lg  font-bold uppercase tracking-widest">
+                Portfolio
+              </h2>
+              <p className="text-lg text-gray-600">
+                Nora Julianna
+              </p>
+            </div>
+          </Link>
+
 
           {/* Navigation Items */}
           <ol className="space-y-4 text-md">
