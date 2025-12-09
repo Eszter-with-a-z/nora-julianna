@@ -3,6 +3,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { getProjectBySlug, projects } from "@/lib/projects"
 import Navigation from "@/components/navigation"
+import GalleryImage from "@/components/gallery-image"
+
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>
@@ -39,6 +41,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </div>
 
+
+        {/* Cover Image */}
+        <div className="w-full">
+          <div className="max-w-4xl mx-auto">
+            <div className="relative w-full aspect-video bg-gray-100 overflow-hidden">
+              <Image src={project.coverImage || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+            </div>
+          </div>
+        </div>
+        
         {/* Project Header */}
         <div className="w-full px-6 md:px-12 py-12 md:py-16">
           <div className="max-w-4xl mx-auto space-y-6">
@@ -54,28 +66,19 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </div>
 
-        {/* Cover Image */}
-        <div className="w-full px-6 md:px-12 py-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="relative w-full aspect-video bg-gray-100 overflow-hidden">
-              <Image src={project.coverImage || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
-            </div>
-          </div>
-        </div>
-
         {/* Additional Images */}
         <div className="w-full px-6 md:px-12 py-12">
           <div className="max-w-4xl mx-auto space-y-8">
             {project.images.map((image, index) => (
-              <div key={index} className="relative w-full aspect-video bg-gray-100 overflow-hidden">
-                <Image
-                  src={image || "/placeholder.svg"}
-                  alt={`${project.title} - Image ${index + 1}`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <GalleryImage
+                key={index}
+                images={[project.coverImage, ...project.images]}
+                index={index + 1} // +1 because cover image is index 0
+                src={image || "/placeholder.svg"}
+                alt={`${project.title} - Image ${index + 1}`}
+              />
             ))}
+
           </div>
         </div>
 
