@@ -8,6 +8,8 @@ export interface Project {
   images: string[]
 }
 
+const CLOUDINARY_URL_BASE="";
+
 export const projects: Project[] = [
   {
     id: "01",
@@ -29,11 +31,10 @@ export const projects: Project[] = [
     keywords: ["geometric", "abstract", "experimental"],
     coverImage: "/geometric-abstract.png",
     description: "Exploring geometric forms and abstract compositions.",
-    images: [
-      "/geometric-abstract.png",
-      "/portrait-photography-artistic-moody.jpg",
-      "/street-photography-urban-scenes.jpg",
-    ],
+    images: Array.from(
+      {length: 3},
+      (_, i) => `${CLOUDINARY_URL_BASE}/starchaped/image-${i + 1}.jpg`
+    ),
   },
   {
     id: "03",
