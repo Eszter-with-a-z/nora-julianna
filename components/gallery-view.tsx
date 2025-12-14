@@ -89,7 +89,7 @@ export function GalleryView({ images, initialIndex, onClose }: GalleryViewProps)
   if (!mounted) return null
   return createPortal(
     <div
-      className={`fixed inset-0 flex bg-black/70 backdrop-blur-lg items-center justify-center glass-bg transition-opacity duration-300 ${
+      className={`fixed inset-0 flex bg-white/70 backdrop-blur-lg items-center justify-center glass-bg transition-opacity duration-300 ${
         isClosing ? "opacity-0" : "opacity-100"
       } z-[9999]`}
       onClick={handleClose}
@@ -98,7 +98,7 @@ export function GalleryView({ images, initialIndex, onClose }: GalleryViewProps)
     >
       <button
         onClick={handleClose}
-        className="mt-12 cursor-pointer absolute top-4 left-4 p-4 rounded-full bg-white/10  backdrop-blur-xs hover:bg-black/70 transition-colors z-10"
+        className="mt-12 cursor-pointer absolute top-4 left-4 p-2  bg-black  backdrop-blur-xs hover:bg-black/100 z-10"
         aria-label="Close gallery"
       >
         <X color="white" className="w-3 h-3 sm:w-6 sm:h-6 md:w-9 md:h-9" />
@@ -109,8 +109,8 @@ export function GalleryView({ images, initialIndex, onClose }: GalleryViewProps)
           e.stopPropagation()
           handlePrevious()
         }}
-        className="cursor-pointer absolute left-4 p-3 rounded-full bg-white/10 backdrop-blur-lg bg-blur-sm hover:bg-black/70 transition-colors z-10"
-        aria-label="Previous image"
+        className="cursor-pointer absolute left-4 p-2 bg-black black z-10"
+        aria-label="Előző"
       >
         <ChevronLeft color="white" className="w-3 h-3 sm:w-6 sm:h-6 md:w-9 md:h-9" />
       </button>
@@ -120,8 +120,8 @@ export function GalleryView({ images, initialIndex, onClose }: GalleryViewProps)
           e.stopPropagation()
           handleNext()
         }}
-        className="cursor-pointer absolute right-4 p-3 rounded-full bg-white/10  backdrop-blur-lg bg-blur-sm hover:bg-black/70 transition-colors z-10"
-        aria-label="Next image"
+        className="cursor-pointer absolute right-4 p-2 bg-black z-10"
+        aria-label="Következő kép"
       >
         <ChevronRight color="white" className="w-3 h-3 sm:w-6 sm:h-6 md:w-9 md:h-9" />
       </button>
