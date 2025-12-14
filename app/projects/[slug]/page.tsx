@@ -33,14 +33,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       <main className="flex-1">
         {/* Back Navigation */}
-        <div className="w-full px-6 md:px-12 py-8 border-b border-gray-200">
-          <div className="max-w-4xl mx-auto">
-            <Link href="/" className="text-sm uppercase tracking-widest hover:font-bold transition-all">
+        <Link href="/"  className="w-full  md:px-12 py-3 border-b border-gray-200">
+          <div className="w-100 mx-auto text-center">
+            < div className="w-full text-sm uppercase tracking-widest hover:font-bold transition-all">
               ← Back to Portfolio
-            </Link>
+            
+            </div>
           </div>
-        </div>
-
+        </Link>
 
         {/* Cover Image */}
         <div className="w-full">
