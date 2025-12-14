@@ -17,7 +17,7 @@ export const projects: Project[] = [
     title: "ÆLTER ÆGO",
     keywords: ["portrait", "photography", "artistic"],
     coverImage: "/portrait-photography-artistic-moody.jpg",
-    description: "A portrait photography series exploring identity and transformation.",
+    description: "xz",
     images: [
       "/portrait-photography-artistic-moody.jpg",
       "/geometric-abstract.png",
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     title: "Starshaped",
     keywords: ["geometric", "abstract", "experimental"],
     coverImage: "/geometric-abstract.png",
-    description: "Exploring geometric forms and abstract compositions.",
+    description: "xx",
     images: Array.from(
       {length: 3},
       (_, i) => `${CLOUDINARY_URL_BASE}/starchaped/image-${i + 1}.jpg`
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     title: "Street Photography",
     keywords: ["urban", "documentary", "candid"],
     coverImage: "/street-photography-urban-scenes.jpg",
-    description: "Capturing everyday moments in urban environments.",
+    description: "xy",
     images: [
       "/street-photography-urban-scenes.jpg",
       "/portrait-photography-artistic-moody.jpg",
