@@ -7,12 +7,12 @@ import { projects } from "@/lib/projects"
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen bg-white">
+    <div className="relative flex min-h-screen bg-white md:pl-56 ">
       {/* Sidebar Navigation */}
       <Navigation />
 
       {/* Main Content */}
-      <main className="flex-1">
+      <main className="flex-1 mr-0">
         {/* Header Section */}
         <Header />
 
