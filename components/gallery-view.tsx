@@ -101,7 +101,7 @@ export function GalleryView({ images, initialIndex, onClose }: GalleryViewProps)
         className="mt-12 cursor-pointer absolute top-4 left-4 p-2  bg-black  backdrop-blur-xs hover:bg-black/100 z-10"
         aria-label="Close gallery"
       >
-        <X color="white" className="w-3 h-3 sm:w-6 sm:h-6 md:w-9 md:h-9" />
+        <X color="white" className="w-3 h-3 sm:w-6 sm:h-3 md:w-5 md:h-5" />
       </button>
 
       <button
@@ -112,7 +112,7 @@ export function GalleryView({ images, initialIndex, onClose }: GalleryViewProps)
         className="cursor-pointer absolute left-4 p-2 bg-black black z-10"
         aria-label="Előző"
       >
-        <ChevronLeft color="white" className="w-3 h-3 sm:w-6 sm:h-6 md:w-9 md:h-9" />
+        <ChevronLeft color="white" className="w-3 h-9 md:w-5 md:h-15" />
       </button>
 
       <button
@@ -123,7 +123,7 @@ export function GalleryView({ images, initialIndex, onClose }: GalleryViewProps)
         className="cursor-pointer absolute right-4 p-2 bg-black z-10"
         aria-label="Következő kép"
       >
-        <ChevronRight color="white" className="w-3 h-3 sm:w-6 sm:h-6 md:w-9 md:h-9" />
+        <ChevronRight color="white" className="w-3 h-9 md:w-5 md:h-15" />
       </button>
 
       <div

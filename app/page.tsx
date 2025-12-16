@@ -36,7 +36,7 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="w-full border-t border-gray-200 px-6 md:px-12 py-8">
+        <footer className="w-full border-t border-red-400 px-6 md:px-12 py-8">
           <div className="max-w-4xl mx-auto">
             <p className="text-sm text-gray-600">© 2025 Nora Julianna. All rights reserved.</p>
           </div>

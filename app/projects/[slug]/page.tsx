@@ -83,7 +83,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
 
         {/* Next Project Navigation */}
-        <div className="w-full px-6 md:px-12 py-12 border-t border-black">
+        <div className="w-full px-6 md:px-12 py-12 border-t border-red-400">
           <div className="max-w-4xl mx-auto">
             <Link href={`/projects/${nextProject.slug}`} className="group block">
               <div className="space-y-4">
