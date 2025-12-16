@@ -55,11 +55,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 </CarouselContent>
               </Carousel>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap justify-center gap-2">
               {project.keywords.map((keyword) => (
                 <span
                   key={keyword}
-                  className="px-3 py-1 border border-gray-300 text-xs uppercase tracking-widest hover:bg-gray-50 transition-colors"
+                  className="px-3 py-1 border border-black text-xs uppercase tracking-widest hover:bg-gray-50 transition-colors"
                 >
                   {keyword}
                 </span>

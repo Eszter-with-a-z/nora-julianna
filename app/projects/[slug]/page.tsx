@@ -31,9 +31,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     <div className="flex min-h-screen bg-white">
       <Navigation />
 
-      <main className="flex-1">
+      <main className="flex-1  md:ml-56">
         {/* Back Navigation */}
-        <Link href="/"  className="w-full  md:px-12 py-3 border-b border-gray-200">
+        <Link href="/"  className="w-full  md:px-12 py-3">
           <div className="w-100 mx-auto text-center">
             < div className="w-full text-sm uppercase tracking-widest hover:font-bold transition-all">
               ← Back to Portfolio
@@ -83,7 +83,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
 
         {/* Next Project Navigation */}
-        <div className="w-full px-6 md:px-12 py-12 border-t border-gray-200">
+        <div className="w-full px-6 md:px-12 py-12 border-t border-black">
           <div className="max-w-4xl mx-auto">
             <Link href={`/projects/${nextProject.slug}`} className="group block">
               <div className="space-y-4">
@@ -97,7 +97,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
 
         {/* Footer */}
-        <footer className="w-full border-t border-gray-200 px-6 md:px-12 py-8 mt-8">
+        <footer className="w-full border-t border-red-400 px-6 md:px-12 py-8 mt-8">
           <div className="max-w-4xl mx-auto">
             <p className="text-sm text-gray-600">© 2025 Nora Julianna. All rights reserved.</p>
           </div>
